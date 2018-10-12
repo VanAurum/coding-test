@@ -1,6 +1,7 @@
 #tests.py
 
-'''About tests.py:
+'''
+About tests.py:
 This module contains all the unit tests for testing both the main solution and the helper functions in solution/helpers.py
 '''
 

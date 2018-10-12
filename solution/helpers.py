@@ -65,10 +65,11 @@ def subtract_sets(A,B):
     for set_a in A:
         temp=set_a
         for set_b in B:
-            temp=temp-set_a.intersection(set_b)    
+            temp=temp-temp.intersection(set_b)    
         results.append(temp)
     #convert list of sets to list of lists if set is not empty.
     results=[list(a) for a in results if len(a)!=0]
+    results=[sorted(a) for a in results]
     return results
 
 def determine_split_indices(results):
@@ -87,6 +88,54 @@ def determine_split_indices(results):
             if ((list_[i+1]-list_[i])!=1):
                 sublist.append(i)
         split_indices.append(sublist)
-    return split_indices            
+    return split_indices
+
+def split_results_on_split_indices(results, split_indices):
+    '''Creates a list of all ranges in preparation for conversion to final solution.
+    '''
+    final_list=[]
+    for i in range(len(results)):
+        splits=split_indices[i]
+        final_list=split_list_on_index(results[i],splits,final_list)
+    return final_list
+
+def split_list_on_index(list_to_split, indices, holder):
+    '''Splits an individual list into multiple lists given a list of indices to split on.
+    '''
+    start_index=0
+    if (len(indices)==0):
+        holder.append(list_to_split)
+        return holder
+    for index in indices:
+        l=list_to_split[start_index:index+1]
+        holder.append(l)
+        start_index=index+1   
+    l_final=indices[-1]+1
+    l=list_to_split[l_final:len(list_to_split)+1]
+    holder.append(l)
+    return holder
+
+def convert_time_lists_to_time_string(final_list):
+    solution=[]
+    for list_ in final_list:
+        start=convert_integer_to_string_time(list_[0])
+        end=convert_integer_to_string_time(list_[-1])
+        solution.append(start+'-'+end)
+    return solution
+
+def convert_integer_to_string_time(minutes):
+    '''Accepts an integer representing minutes in 24-hour time and converts to time. 
+    For example: 60 gets converted to 01:00, 300 gets converted to 05:00 
+    '''
+    hours=minutes//60
+    str_hours=str(hours)
+    if (len(str_hours)==1):
+        str_hours='0'+str_hours
+
+    minute=minutes % 60 
+    str_minute=str(minute)
+    if (len(str_minute)==1):
+        str_minute='0'+str_minute
+    return str_hours+':'+str_minute    
 
        

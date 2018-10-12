@@ -1,10 +1,9 @@
 # league-coding-test
-<h5>By: Kevin Vecmanis, P.Eng<h5>
+<h5>By: Kevin Vecmanis, P.Eng</h5>
 <br>
 This is the submission repository for League's take-home coding test.
 <br>
-<br>
-<h3>Coding problem<h3>
+<h3>Coding problem</h3>
 
 Write a program that will subtract one list of time ranges from another. Formally: for two lists of time ranges A and B, a time is in (A-B) if and only if it is part of A and not part of B.
 <br>

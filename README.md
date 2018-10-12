@@ -3,6 +3,22 @@
 <br>
 This is the submission repository for League's take-home coding test.
 <br>
+<h3>Author comments:</h3>
+For this soluton I opted to use a string format for the time range inputs. For example, an acceptable input for either A or B will be in the form:
+<br>
+<br>
+['8:00-10:00',] or<br>
+['8:00-10:00','11:15-12:00','14:25-15:00',]
+<br>
+<br>
+The solution can also handle whitespace and other undesirable user input formats like: 
+<br>
+<br>
+[' 9:00am - 10:00am '] will be converted to ['9:00-10:00']
+<br>
+<br>
+All inputs are assumed to be in 24 hour time.
+
 <h3>Coding problem</h3>
 
 Write a program that will subtract one list of time ranges from another. Formally: for two lists of time ranges A and B, a time is in (A-B) if and only if it is part of A and not part of B.

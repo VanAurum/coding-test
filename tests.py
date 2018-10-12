@@ -4,6 +4,11 @@
 About tests.py:
 This module contains all the unit tests for testing both the main solution and the helper functions in solution/helpers.py
 '''
+#Standard library imports
+import unittest
+
+#Local application imports
+from solution.helpers import convert_time_range_to_integers, clean_time_range_string
 
 class TestSolution(unittest.TestCase):
     
@@ -14,7 +19,7 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(clean_time_range_string('9:00  -  10:00pm '), '9:00-10:00')
     
 
-if '__name__'=='__main__':
+if __name__=='__main__':
     
-suite=unittest.TestLoader().loadTestsFromTestCase(TestSolution)
-unittest.TextTestRunner(verbosity=2).run(suite) 
+    suite=unittest.TestLoader().loadTestsFromTestCase(TestSolution)
+    unittest.TextTestRunner(verbosity=2).run(suite) 

@@ -54,6 +54,7 @@ def generate_sets_from_tuple_ranges(list_of_ranges):
     #convert list of ranges to list of lists
     x=[list(range(a[0],a[1]+1)) for a in list_of_ranges if (a[0]!=a[1])]
     #convert list of lists to list of sets
+    #x=[sorted(a) for a in x]
     x=[set(a) for a in x]
     return x
 
@@ -65,10 +66,17 @@ def subtract_sets(A,B):
     for set_a in A:
         temp=set_a
         for set_b in B:
-            temp=temp-temp.intersection(set_b)    
+            if (set_b==temp):
+                temp={''}
+            else:
+                list_b=sorted(list(set_b))
+                list_b.pop(0)
+                list_b.pop()
+                set_b=set(list_b)
+                temp=temp-set_b
         results.append(temp)
     #convert list of sets to list of lists if set is not empty.
-    results=[list(a) for a in results if len(a)!=0]
+    results=[list(a) for a in results if len(a)!=0 and '' not in a]
     results=[sorted(a) for a in results]
     return results
 

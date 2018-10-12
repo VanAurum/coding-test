@@ -16,7 +16,7 @@ from solution.helpers import convert_time_range_to_integers,\
                              split_list_on_index,\
                              split_results_on_split_indices,\
                              convert_integer_to_string_time
-from solution.solution import subtract_time_ranges
+from solution.subtract_times import subtract_time_ranges
 
 
 class TestSolution(unittest.TestCase):
@@ -34,14 +34,8 @@ class TestSolution(unittest.TestCase):
 
     def test_subtract_sets_01(self):
         A=[{1,2,3,4,5},{10,11,12,13,14,15}]
-        B=[{1,2,3},{14,15,16}]
-        output=[[4,5],[10,11,12,13]]
-        self.assertEqual(subtract_sets(A,B), output)
-
-    def test_subtract_sets_02(self):
-        A=[{1,2,3,4,5},{10,11,12,13,14,15}]
         B=[{1,2,3,4,5},{14,15,16}]
-        output=[[10,11,12,13]]
+        output=[[10,11,12,13,14]]
         self.assertEqual(subtract_sets(A,B), output)
 
     def test_split_indices_01(self):
@@ -76,14 +70,32 @@ class TestSolution(unittest.TestCase):
     def test_subtract_time_ranges_01(self):
         A=['9:00-10:00']
         B=['9:00-9:30']
-        output=['9:30-10:00']
+        output=['09:30-10:00']
         self.assertEqual(subtract_time_ranges(A,B),output)
 
     def test_subtract_time_ranges_02(self):
         A=['9:00-10:00', '10:00-11:00']
         B=['9:00-9:30']
-        output=['9:30-10:00','10:00-11:00']
-        self.assertEqual(subtract_time_ranges(A,B),output)        
+        output=['09:30-10:00','10:00-11:00']
+        self.assertEqual(subtract_time_ranges(A,B),output)
+
+    def test_subtract_time_ranges_03(self):
+        A=['9:00-11:00', '13:00-15:00']
+        B=['9:00-9:15','10:00-10:15','12:30-16:00']
+        output=['09:15-10:00','10:15-11:00']
+        self.assertEqual(subtract_time_ranges(A,B),output)
+
+    def test_subtract_time_ranges_04(self):
+        A=['9:00-11:00', '13:00-15:00']
+        B=['9:00-9:15','9:20-9:45','13:00-15:00']
+        output=['09:15-09:20','09:45-11:00']
+        self.assertEqual(subtract_time_ranges(A,B),output)
+
+    def test_subtract_time_ranges_05(self):
+        A=['22:00-23:50']
+        B=['22:03-22:10','22:30-22:35','23:40-23:50']
+        output=['22:00-22:03','22:10-22:30','22:35-23:40']
+        self.assertEqual(subtract_time_ranges(A,B),output)
 
 if __name__=='__main__':
     

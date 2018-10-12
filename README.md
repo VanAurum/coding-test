@@ -7,8 +7,8 @@ This is the submission repository for League's take-home coding test.
 For this soluton I opted to use a string format for the time range inputs. For example, an acceptable input for either A or B will be in the form:
 <br>
 <br>
-['8:00-10:00',] or<br>
-['8:00-10:00','11:15-12:00','14:25-15:00',]
+['8:00-10:00'] or<br>
+['8:00-10:00', '11:15-12:00', '14:25-15:00',]
 <br>
 <br>
 The solution can also handle whitespace and other undesirable user input formats like: 

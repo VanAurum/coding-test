@@ -59,10 +59,13 @@ brew install pipenv
 ```
 <h3>Using the CLI</h3>
 To run the CLI, navigate to the solution folder within your terminal and run
+
 ```
 python cli.py
 ```
+
 You should see the default menu that looks like this
+
 ```
 ------------------------------
    M A I N - M E N U✨
@@ -85,4 +88,3 @@ List B:
 Enter the list you would like to 
 change, or enter "run" to use default lists (A, B, run, quit):
 ```
-<br>

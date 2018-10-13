@@ -39,4 +39,12 @@ Examples:<br>
 (9:00-9:30) “minus” (9:30-15:00) = (9:00-9:30)
 (9:00-9:30, 10:00-10:30) “minus” (9:15-10:15) = (9:00-9:15, 10:15-10:30)
 (9:00-11:00, 13:00-15:00) “minus” (9:00-9:15, 10:00-10:15, 12:30-16:00) = (9:15-10:00, 10:15-11:00)
+<<<<<<< HEAD
 ```
+=======
+
+<br>
+<h3>Command Line Interface</h3>
+I programmed a simple command line interface for League code reviewers so they can try varations of time ranges.  
+
+>>>>>>> aedea661d1210043b15ea13d7322f1276d442bf4

@@ -63,6 +63,13 @@ To run the CLI, navigate to the solution folder within your terminal and run
 ```
 python cli.py
 ```
+If you encounter errors regarding packages or the Click library, install pipenv and run the following within the root directory of the project
+
+```
+$ pipenv shell
+$ cd solution
+$ python cli.py
+```
 
 You should see the default CLI menu that looks like this
 
@@ -89,13 +96,7 @@ Enter the list you would like to
 change, or enter "run" to use default lists (A, B, run, quit):
 ```
 
-If you encounter errors regarding packages or click, install pipenv and run the following within the root directory of the project
 
-```
-$ pipenv shell
-$ cd solution
-$ python cli.py
-```
 
 
 There are four commands: A, B, run and quit. 

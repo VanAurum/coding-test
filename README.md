@@ -1,6 +1,5 @@
 <h2>Coding Test</h2>
 <h3>By: Kevin Vecmanis, P.Eng</h3>
-<br>
 <h3>Author Preface & Comments:</h3>
 For this soluton I opted to use a string format for the time range inputs. For example, an acceptable input for either A or B will be in the form:
 <br>
@@ -12,11 +11,13 @@ For this soluton I opted to use a string format for the time range inputs. For e
 ```
 
 <br>
-<br>
 The solution can also handle whitespace and other undesirable user input formats like: 
 <br>
-<br>
+
+```
 [' 9:00am - 10:00am '] will be converted to ['9:00-10:00']
+```
+
 <br>
 <br>
 All inputs are assumed to be in 24 hour time.  I programmed a simple command line interface tool for running the program and editing the time range lists.  Jump to <b>Getting Started</b> for information on how to download and run the CLI.

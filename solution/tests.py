@@ -1,4 +1,4 @@
-#tests.py
+#solution/tests.py
 
 '''
 About tests.py:
@@ -9,13 +9,13 @@ import unittest
 
 #Local application imports
 from helpers import convert_time_range_to_integers,\
-                     clean_time_range_string,\
-                     generate_sets_from_tuple_ranges,\
-                             subtract_sets,\
-                             determine_split_indices,\
-                             split_list_on_index,\
-                             split_results_on_split_indices,\
-                             convert_integer_to_string_time
+                    clean_time_range_string,\
+                    generate_sets_from_tuple_ranges,\
+                    subtract_sets,\
+                    determine_split_indices,\
+                    split_list_on_index,\
+                    split_results_on_split_indices,\
+                    convert_integer_to_string_time
 from subtract_times import subtract_time_ranges
 
 

@@ -1,4 +1,4 @@
-#solutions/helpers.py
+#solution/helpers.py
 '''
 About helper.py:
 This module contains all the testable support functions used in the main solution in solution/main.py

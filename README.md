@@ -119,3 +119,11 @@ List input to the CLI is robust, but not perfectly robust. To enter new lists in
 ```
 
 If the time range does not include a dash "-", or colons are missing, you will be asked to re-enter input.  There are no limits on the number of times you can have in a list.
+
+<h3>Testing</h3>
+
+To run the suite of unit tests, run the following command from within the solution directory of the project. All tests reside in tests.py and test the key individual functionality of the functions in helpers.py and subtract_times.py. There are no testing modules for the CLI.
+
+```
+$ python tests.py
+```

@@ -10,7 +10,7 @@ from helpers import clean_time_range_string
 #3rd party module imports
 import click
 
-
+#Set default time ranges for demonstration purposes
 A=['9:00-10:00','10:25-15:25']
 B=['9:15-9:45','10:15-14:00']
 @click.command()
@@ -20,9 +20,12 @@ B=['9:15-9:45','10:15-14:00']
               prompt='Enter the list you would like to \nchange, or enter "run" to use default lists',
 )
 def main(change_input):
+    '''Main function for handling CLI input.
+    '''
     global A
     global B
     if change_input:
+        #Logic for handling the editing of list A
         if (change_input.upper()=='A'):
             while True:
                 print('')
@@ -43,7 +46,8 @@ def main(change_input):
                 print('8:30-10:00, 22:00-22:05, 00:12-00:46')
                 print('5:00-5:30, 6:00-7:00')
                 print('')    
-            main()    
+            main()
+        #Logic for handling the editing of list B        
         elif(change_input.upper()=='B'):
             while True:
                 print('')
@@ -64,13 +68,21 @@ def main(change_input):
                 print("8:30-10:00, 22:00-22:05, 00:12-00:46")
                 print('5:00-5:30, 6:00-7:00')
                 print('')    
-            main()    
+            main()
+        #Logic for handling the executing of 'run' command        
         elif(change_input.lower()=='run'):
             try:
                 results=subtract_time_ranges(A,B)
             except:
                 print('Whoops, an error occurred subtracting these times. Please try new times.')  
-                main()            
+                main()
+            print('\nList A: ')
+            for entry in A:
+                print(' '+entry)
+            print('\n--minus--\n')
+            print('List B: ')
+            for entry in B:
+                print(' '+entry)                    
             print('\nAnswer:')
             for result in results:
                 print(result)
@@ -82,6 +94,14 @@ def main(change_input):
     main()
 
 def valid_input(X):
+    '''Cleans and ensures user-provided lists of time ranges are an acceptable format.
+        -Removes white space
+        -Removes list markers if entered ([])
+        -Removes extraneous text with clean_time_range_string function
+        -Ensures colons are present in times.
+        -Ensures dashes are present in times.
+        -Ensures user input is not empty.
+    '''
     list_=[]
     X.replace('[','')
     X.replace(']','')
@@ -94,7 +114,7 @@ def valid_input(X):
         return False,msg
     if (X.count(':')<2):
         msg='One of the times in the range is missing a colon (":")'
-        return False,msg
+        return False,msg    
     if ('-' not in X):
         msg='You are missing a dash in your time range'
         return False,msg   
@@ -104,10 +124,14 @@ def valid_input(X):
             list_.append(item)
     else:
         list_.append(X)
+    for entry in list_:
+        if (entry.count(':')<2):
+            msg='At least one time range is missing a colon'
+            return False, msg    
     return True, list_    
 
                   
-
+#Code for main menu when module is launched.
 A=['9:00-10:00','10:25-15:25']
 B=['9:15-9:45','10:15-14:00']
 print('\n\n\n\n')

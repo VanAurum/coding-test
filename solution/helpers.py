@@ -35,7 +35,7 @@ def clean_time_range_string(time_range):
     '''
     #Remove all whitespace
     time_range=time_range.replace(' ','')
-    #Remove extraneous entries in the time range
+    #Remove extraneous entries in the time range if present.
     time_range=time_range.replace('am','')
     time_range=time_range.replace('AM','')
     time_range=time_range.replace('pm','')
@@ -54,7 +54,6 @@ def generate_sets_from_tuple_ranges(list_of_ranges):
     #convert list of ranges to list of lists
     x=[list(range(a[0],a[1]+1)) for a in list_of_ranges if (a[0]!=a[1])]
     #convert list of lists to list of sets
-    #x=[sorted(a) for a in x]
     x=[set(a) for a in x]
     return x
 
@@ -86,7 +85,6 @@ def determine_split_indices(results):
         if a list is [[1,2,3,6,7,8,9]], the output will be [2].
         if a list is [[1,2,4,5,7,8]], the output will be [1,3].
         if a list is [[1,2,4,5], [6,7,9,10]], the output will be [[1],[1]]
-
     The purpose of this is to capture the edge case where a slice of time inside a range is subtracted.
     '''
     split_indices=[]
@@ -124,6 +122,8 @@ def split_list_on_index(list_to_split, indices, holder):
     return holder
 
 def convert_time_lists_to_time_string(final_list):
+    '''Converts integer ranges to time strings and then adds then to final solution list.
+    '''
     solution=[]
     for list_ in final_list:
         start=convert_integer_to_string_time(list_[0])
@@ -135,13 +135,18 @@ def convert_integer_to_string_time(minutes):
     '''Accepts an integer representing minutes in 24-hour time and converts to time. 
     For example: 60 gets converted to 01:00, 300 gets converted to 05:00 
     '''
+    #Get number of whole hours in time range
     hours=minutes//60
+    #Convert hours to string
     str_hours=str(hours)
+    #Text cleaning. Because we're using 24-hour time, add '0' to beginning of single digit hours.
     if (len(str_hours)==1):
         str_hours='0'+str_hours
-
-    minute=minutes % 60 
+    #Get number of minutes after accounting for whole hours.    
+    minute=minutes % 60
+    #Convert minutes to string. 
     str_minute=str(minute)
+    #Format cleaning for 24-hour time, as above with hours.
     if (len(str_minute)==1):
         str_minute='0'+str_minute
     return str_hours+':'+str_minute    

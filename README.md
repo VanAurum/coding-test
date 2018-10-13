@@ -127,3 +127,11 @@ To run the suite of unit tests, run the following command from within the soluti
 ```
 $ python tests.py
 ```
+
+or, as noted above, you may need a pipenv shell active.  In this case, run the following from the root directory of the project
+
+```
+$ pipenv shell
+$ cd solution
+$ python tests.py
+```

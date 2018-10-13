@@ -90,12 +90,13 @@ change, or enter "run" to use default lists (A, B, run, quit):
 ```
 
 There are four commands: A, B, run and quit. 
-<ul>
-    <li>Type 'A' to change time ranges for list A
-    <li>Type 'B' to change time ranges for list B
-    <li>Type 'run' to subtract B from A 
-    <li>Type 'quit' to exit the CLI
-</ul>
+
+```
+'A' to change time ranges for list A
+'B' to change time ranges for list B
+'run' to subtract B from A 
+'quit' to exit the CLI
+```
 
 List input to the CLI is robust, but not perfectly robust. To enter new lists in CLI, you can enter the following time range variations:
 

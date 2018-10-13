@@ -39,7 +39,7 @@ Examples:<br>
 (9:00-11:00, 13:00-15:00) “minus” (9:00-9:15, 10:00-10:15, 12:30-16:00) = (9:15-10:00, 10:15-11:00)
 ```
 <h3>Getting Started</h3>
-To run the CLI, you will need to clone the repository.  First, create a directory anywhere on your computer and navigate it to it using the command line. 
+To run the CLI, you will need to clone the repository.  First, create a directory anywhere on your computer and navigate to it using the command line. 
 
 <h4>Prerequisites</h4>
 To run the CLI, you will need Python 3.7 installed.  It's possible earlier versions will work but they haven't been tested. There is only one third party package required, <b>Click</b>, used for running the CLI. 
@@ -64,7 +64,7 @@ To run the CLI, navigate to the solution folder within your terminal and run
 python cli.py
 ```
 
-You should see the default menu that looks like this
+You should see the default CLI menu that looks like this
 
 ```
 ------------------------------
@@ -88,6 +88,15 @@ List B:
 Enter the list you would like to 
 change, or enter "run" to use default lists (A, B, run, quit):
 ```
+
+If you encounter errors regarding packages or click, install pipenv and run the following within the root directory of the project
+
+```
+$ pipenv shell
+$ cd solution
+$ python cli.py
+```
+
 
 There are four commands: A, B, run and quit. 
 

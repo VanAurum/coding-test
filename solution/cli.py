@@ -112,7 +112,7 @@ if __name__ == "__main__":
     B=['9:15-9:45','10:15-14:00']
     print('\n\n\n\n')
     print (30 * '-')
-    print ("   M A I N - M E N U✨")
+    print ("   M A I N - M E N U")
     print('  By: Kevin Vecmanis')
     print (30 * '-')
 

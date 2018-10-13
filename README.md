@@ -58,12 +58,12 @@ This will install all dependencies within the project. To install pipenv on MacO
 brew install pipenv
 ```
 <h3>Using the CLI</h3>
-To run the CLI, navigate to the solution folder within your terminal and run
+To run the CLI, navigate to the solution folder within your terminal and run:
 
 ```
 python cli.py
 ```
-If you encounter errors regarding packages or the Click library, install pipenv and run the following within the root directory of the project
+If you encounter errors regarding packages or the Click library, install pipenv and run the following within the root directory of the project:
 
 ```
 $ pipenv shell
@@ -71,7 +71,7 @@ $ cd solution
 $ python cli.py
 ```
 
-You should see the default CLI menu that looks like this
+You should see the default CLI menu that looks like this:
 
 ```
 ------------------------------
@@ -128,7 +128,7 @@ To run the suite of unit tests, run the following command from within the soluti
 $ python tests.py
 ```
 
-or, as noted above, you may need a pipenv shell active.  In this case, run the following from the root directory of the project
+or, as noted above, you may need a pipenv shell active.  In this case, run the following from the root directory of the project:
 
 ```
 $ pipenv shell

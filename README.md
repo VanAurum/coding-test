@@ -135,3 +135,26 @@ $ pipenv shell
 $ cd solution
 $ python tests.py
 ```
+
+<h3>Example Output</h3>
+
+When you enter the 'run' command, an output like this will appear: 
+
+```
+List A: 
+ 9:00-10:00
+ 10:25-15:25
+
+--minus--
+
+List B: 
+ 9:15-9:45
+ 10:15-14:00
+
+Answer:
+09:00-09:15
+09:45-10:00
+14:00-15:25
+```
+
+<h5>Thanks for the opportunity!</h5>

@@ -3,22 +3,16 @@
 <h3>Author Preface & Comments:</h3>
 For this soluton I opted to use a string format for the time range inputs. For example, an acceptable input for either A or B will be in the form:
 <br>
-<br>
-
 ```
 ['8:00-10:00'] or
 ['8:00-10:00', '11:15-12:00', '14:25-15:00']
 ```
-
 <br>
 The solution can also handle whitespace and other undesirable user input formats like: 
 <br>
-
 ```
 [' 9:00am - 10:00am '] will be converted to ['9:00-10:00']
 ```
-
-<br>
 <br>
 All inputs are assumed to be in 24 hour time.  I programmed a simple command line interface tool for running the program and editing the time range lists.  Jump to <b>Getting Started</b> for information on how to download and run the CLI.
 
@@ -44,8 +38,21 @@ Examples:<br>
 <h3>Getting Started</h3>
 To run the CLI, you will need to clone the repository.  First, create a directory anywhere on your computer and navigate it to it using the command line. 
 
+<h4>Prerequisites</h4>
+To run the CLI, you will need Python 3.7 installed.  It's possible earlier versions will work but they haven't been tested. There is only one third party package required, <b>Click</b>, used for running the CLI. 
+
 ```
 Step 1. cd <mydir>
-Step 2. Initialize
+Step 2. git clone https://github.com/VanAurum/coding-test.git
+Step 3. pip install click (to install only 3rd party package dependency)
 ```
+Alternatively, if you have pipenv installed on your machine you can run:
+```
+pipenv install --dev
+```
+This will install all dependencies within the project. To install pipenv on MacOS:
+```
+brew install pipenv
+```
+
 <br>

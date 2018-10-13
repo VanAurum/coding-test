@@ -68,7 +68,7 @@ You should see the default CLI menu that looks like this
 
 ```
 ------------------------------
-   M A I N - M E N U✨
+   M A I N - M E N U
   By: Kevin Vecmanis
 ------------------------------
 Hello League. This is my submission 
@@ -117,4 +117,4 @@ List input to the CLI is robust, but not perfectly robust. To enter new lists in
 00:01-00:04, 00:08-00:10 
 ```
 
-If the time range does not include a dash "-", or colons are missing, you will be asked to re-enter input.  
+If the time range does not include a dash "-", or colons are missing, you will be asked to re-enter input.  There are no limits on the number of times you can have in a list.

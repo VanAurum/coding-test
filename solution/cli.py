@@ -107,26 +107,26 @@ def valid_input(X):
     return True, list_    
 
                   
-if __name__ == "__main__":
-    A=['9:00-10:00','10:25-15:25']
-    B=['9:15-9:45','10:15-14:00']
-    print('\n\n\n\n')
-    print (30 * '-')
-    print ("   M A I N - M E N U")
-    print('  By: Kevin Vecmanis')
-    print (30 * '-')
 
-    print('Hello League. This is my submission \nfor the coding test. Enjoy!')
-    print('')
-    print('Default choices for lists A and B are shown below:')
-    print('')
-    print('List A:')
-    for entry in A:
-        print(entry)
-    print('')
-    print('List B:') 
-    for entry in B:
-        print(entry)
-    print('')
-    print (30 * '-') 
-    main()
+A=['9:00-10:00','10:25-15:25']
+B=['9:15-9:45','10:15-14:00']
+print('\n\n\n\n')
+print (30 * '-')
+print ("   M A I N - M E N U")
+print('  By: Kevin Vecmanis')
+print (30 * '-')
+
+print('Hello League. This is my submission \nfor the coding test. Enjoy!')
+print('')
+print('Default choices for lists A and B are shown below:')
+print('')
+print('List A:')
+for entry in A:
+    print(entry)
+print('')
+print('List B:') 
+for entry in B:
+    print(entry)
+print('')
+print (30 * '-') 
+main()

@@ -8,16 +8,15 @@ This module contains all the unit tests for testing both the main solution and t
 import unittest
 
 #Local application imports
-from solution.helpers import convert_time_range_to_integers,\
-                             clean_time_range_string,\
-                             generate_sets_from_tuple_ranges,\
+from helpers import convert_time_range_to_integers,\
+                     clean_time_range_string,\
+                     generate_sets_from_tuple_ranges,\
                              subtract_sets,\
                              determine_split_indices,\
                              split_list_on_index,\
                              split_results_on_split_indices,\
-                             convert_integer_to_string_time,\
-                             handle_raw_input
-from solution.subtract_times import subtract_time_ranges
+                             convert_integer_to_string_time
+from subtract_times import subtract_time_ranges
 
 
 class TestSolution(unittest.TestCase):

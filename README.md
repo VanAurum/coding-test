@@ -1,5 +1,5 @@
 # league-coding-test
-<h5>By: Kevin Vecmanis, P.Eng</h5>
+<h3>By: Kevin Vecmanis, P.Eng</h3>
 <br>
 This is the submission repository for League's take-home coding test.
 <br>

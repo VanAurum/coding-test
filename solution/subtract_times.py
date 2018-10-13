@@ -6,7 +6,8 @@ Created on Thu Oct 11 20:51:01 2018
 @author: Kevin Vecmanis
 """
 import unittest
-from .helpers import convert_time_range_to_integers,\
+import sys
+from helpers import convert_time_range_to_integers,\
                     clean_time_range_string,\
                     generate_sets_from_tuple_ranges,\
                     subtract_sets,\
@@ -38,4 +39,3 @@ def subtract_time_ranges(A,B):
     final_list=[a for a in final_list if len(a)>1]
     solution = convert_time_lists_to_time_string(final_list)        
     return solution
-

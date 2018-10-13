@@ -88,3 +88,23 @@ List B:
 Enter the list you would like to 
 change, or enter "run" to use default lists (A, B, run, quit):
 ```
+
+There are four commands: A, B, run and quit. 
+<ul>
+    <li>Type 'A' to change time ranges for list A
+    <li>Type 'B' to change time ranges for list B
+    <li>Type 'run' to subtract B from A 
+    <li>Type 'quit' to exit the CLI
+</ul>
+
+List input to the CLI is robust, but not perfectly robust. To enter new lists in CLI, you can enter the following time range variations:
+
+```
+9:00-10:00 (without leading 0)
+09:00am-10:00am (with leading 0)
+9:00 - 10:00 (whitespace)
+9:00-10:00,22:00-22:05 (multiple entries)
+00:01-00:04, 00:08-00:10 
+```
+
+If the time range does not include a dash "-", or colons are missing, you will be asked to re-enter input.  

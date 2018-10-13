@@ -9,7 +9,6 @@ For this soluton I opted to use a string format for the time range inputs. For e
 ['8:00-10:00', '11:15-12:00', '14:25-15:00']
 ```
 
-<br>
 The solution can also handle whitespace and other undesirable user input formats like: 
 <br>
 
@@ -58,5 +57,32 @@ This will install all dependencies within the project. To install pipenv on MacO
 ```
 brew install pipenv
 ```
+<h3>Using the CLI</h3>
+To run the CLI, navigate to the solution folder within your terminal and run
+```
+python cli.py
+```
+You should see the default menu that looks like this
+```
+------------------------------
+   M A I N - M E N U✨
+  By: Kevin Vecmanis
+------------------------------
+Hello League. This is my submission 
+for the coding test. Enjoy!
 
+Default choices for lists A and B are shown below:
+
+List A:
+9:00-10:00
+10:25-15:25
+
+List B:
+9:15-9:45
+10:15-14:00
+
+------------------------------
+Enter the list you would like to 
+change, or enter "run" to use default lists (A, B, run, quit):
+```
 <br>
